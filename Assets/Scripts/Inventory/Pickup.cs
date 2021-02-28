@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Invetory inventory; // указываем наш инвентарь
+    public GameObject slotButton; // объект предмета который будет лежать в слоте
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Invetory>(); // мы получаем компонент инвентарь у нашего игрока
     }
 }
